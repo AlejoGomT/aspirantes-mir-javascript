@@ -3,9 +3,12 @@ console.log("Function sum numbers of a array:");
 
 function sum(numbers){
     var sumNumber=0;
-    for(i=0; i<numbers.length; i++){
-        sumNumber += numbers[i];
-    }
+    //for(i=0; i<numbers.length; i++){
+    //    sumNumber += numbers[i];
+    //}
+    numbers.forEach(Number => {
+        sumNumber += Number;
+    });
     return "[" + numbers + "] Array sum: " + sumNumber;
 }
 
