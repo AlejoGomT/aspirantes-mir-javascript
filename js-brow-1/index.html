@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1:</title>
+</head>
+<body>
+    <label for="texto">Escribe algo:</label>
+    <input type="text" id="texto">
+    <button class="btn">Convetir mensaje a Mayusculas</button>
+    <p id="resultado">normal:</p>
+    <p id="resultadoEnMayuscula">mayus:</p>
+    
+    
+    <script>
+        const input = document.getElementById('texto');
+        const result = document.querySelector('#resultado');
+        
+        input.addEventListener('input', function(){
+            const texto = input.value;
+            resultado.textContent = texto;
+        });
+        
+        const mayus = document.querySelector("#resultadoEnMayuscula");
+        const button = document.querySelector(".btn");
+        
+        button.addEventListener("click", mayusculas);
+        
+        function mayusculas(){
+            const texto = input.value.toUpperCase();
+            mayus.textContent = texto;
+        };
+        
+    </script>
+
+</body>
+</html>
